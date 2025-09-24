@@ -4,8 +4,11 @@ node_js:
 
 deploy:
   provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
+  edge: true            # use dpl v2
+  strategy: git
+  token: $GITHUB_TOKEN  # <-- uses the env var you set
   local_dir: build
+  keep_history: false
   on:
     branch: main
+
