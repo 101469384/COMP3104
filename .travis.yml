@@ -1,12 +1,15 @@
 language: node_js
 node_js:
-  - "stable"
+  - "18"
+cache:
+  directories:
+    - node_modules
 
 deploy:
   provider: pages
-  edge: true            # use dpl v2
+  edge: true
   strategy: git
-  token: $GITHUB_TOKEN  # <-- uses the env var you set
+  token: $GITHUB_TOKEN
   local_dir: build
   keep_history: false
   on:
