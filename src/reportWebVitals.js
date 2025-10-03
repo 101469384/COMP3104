@@ -1,10 +1,12 @@
-import { onCLS, onFID, onLCP, onINP } from "web-vitals";
+const reportWebVitals = onPerfEntry => {
+    if (onPerfEntry && onPerfEntry instanceof Function) {
+        import('web-vitals').then(({ getCLS, getFID, getLCP }) => {
+            getCLS(onPerfEntry);
+            getFID(onPerfEntry);
+            getLCP(onPerfEntry);
+        });
+    }
+};
 
-export default function reportWebVitals(onPerfEntry) {
-  if (onPerfEntry && typeof onPerfEntry === "function") {
-    onCLS(onPerfEntry);
-    onFID(onPerfEntry);
-    onLCP(onPerfEntry);
-    onINP(onPerfEntry);
-  }
-}
+export default reportWebVitals;
+
