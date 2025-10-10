@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/COMP3104/static/js/main.e8e4b055.js",
+    "static/js/453.19136742.chunk.js": "/COMP3104/static/js/453.19136742.chunk.js",
+    "index.html": "/COMP3104/index.html",
+    "main.e8e4b055.js.map": "/COMP3104/static/js/main.e8e4b055.js.map",
+    "453.19136742.chunk.js.map": "/COMP3104/static/js/453.19136742.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.e8e4b055.js"
+  ]
+}
