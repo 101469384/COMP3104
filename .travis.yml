@@ -1,22 +1,24 @@
 language: node_js
 node_js:
-  - "18"
+  - "stable"
+
 cache:
   directories:
     - node_modules
+
 install:
   - npm install
 
 script:
   - npm run build
+  - cp build/index.html build/404.html
 
 deploy:
   provider: pages
-  edge: true
-  strategy: git
-  token: $GITHUB_TOKEN
+  skip_cleanup: true
+  github_token: $github_token
   local_dir: build
-  keep_history: false
   on:
     branch: main
+
 
